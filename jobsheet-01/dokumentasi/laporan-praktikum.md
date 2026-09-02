@@ -12,11 +12,11 @@
 
 ## DAFTAR ISI
 
-1. [`index.html`](./jobsheet-01/index.html)
-2. [`buku/list.html`](./jobsheet-01/buku/list.html)
-3. [`buku/tambah.html`](./jobsheet-01/buku/tambah.html)
-4. [`anggota/list.html`](./jobsheet-01/anggota/list.html)
-5. [`anggota/tambah.html`](./jobsheet-01/anggota/tambah.html)
+1. [`index.html`](../index.html)
+2. [`buku/list.html`](../buku/list.html)
+3. [`buku/tambah.html`](../buku/tambah.html)
+4. [`anggota/list.html`](../anggota/list.html)
+5. [`anggota/tambah.html`](../anggota/tambah.html)
 
 ---
 
