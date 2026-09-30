@@ -1,0 +1,554 @@
+/* =========================================
+   SIMPUS-Mini - Stylesheet
+   Tema: Hijau Teal
+   ========================================= */
+
+/* ===== Reset ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #eef6f4;
+    line-height: 1.5;
+}
+
+
+/* ===== Link ===== */
+a {
+    color: #0f766e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: white;
+
+    min-height: 72px;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    box-shadow: 0 2px 8px rgba(15, 118, 110, 0.18);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* ===== Navigation ===== */
+header nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 0.5rem;
+}
+
+header nav a {
+    display: block;
+
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    padding: 0.65rem 0.8rem;
+    border-radius: 7px;
+
+    transition: background-color 0.2s ease;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+}
+
+
+/* ===== Main ===== */
+main {
+    width: min(1100px, calc(100% - 40px));
+    margin: 2rem auto;
+}
+
+
+/* ===== Section ===== */
+section {
+    background-color: white;
+
+    padding: 1.6rem;
+    margin-bottom: 1.5rem;
+
+    border-radius: 14px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+
+    animation: fadeIn 0.35s ease;
+}
+
+section h2 {
+    color: #0f766e;
+    font-size: 1.35rem;
+
+    margin-bottom: 1.4rem;
+}
+
+
+/* ===== Animasi ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   KARTU STATISTIK (STATS-GRID)
+   ========================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.stats-grid article {
+    min-width: 0;
+
+    background: #e2f4f1;
+
+    border: 1px solid #cce9e4;
+    border-radius: 12px;
+
+    padding: 1.4rem 1rem;
+
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.stats-grid article:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 16px rgba(15, 118, 110, 0.12);
+}
+
+.stats-grid article h3 {
+    color: #416662;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    margin-bottom: 0.55rem;
+}
+
+.stats-grid article p {
+    color: #0f766e;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   TABEL & TOMBOL AKSI
+   ========================================= */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem 0.8rem;
+
+    text-align: left;
+
+    border-bottom: 1px solid #dcebe7;
+}
+
+thead {
+    background: #0f766e;
+    color: white;
+}
+
+th {
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5faf9;
+}
+
+tbody tr:hover {
+    background-color: #e3f4f1;
+}
+
+/* ===== Form Hapus ===== */
+td form.form-hapus {
+    display: inline;
+}
+
+/* ===== Tombol & Tautan Edit/Hapus ===== */
+td button,
+td a.btn-edit {
+    border: none;
+    border-radius: 6px;
+
+    padding: 0.4rem 0.75rem;
+    margin-right: 0.3rem;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+td button:hover,
+td a.btn-edit:hover {
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* Tautan Edit */
+td button:first-of-type,
+td a.btn-edit {
+    display: inline-block;
+    background-color: #f0ad4e;
+    color: #fff;
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Tombol Hapus */
+td button:last-of-type {
+    background-color: #d9534f;
+    color: white;
+}
+
+
+/* =========================================
+   PAGINATION
+   ========================================= */
+
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pagination a {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+    color: #0f766e;
+}
+
+.pagination a.active {
+    background-color: #0f766e;
+    color: #fff;
+    border-color: #0f766e;
+}
+
+
+/* =========================================
+   SEARCH
+   ========================================= */
+
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 350px;
+
+    padding: 0.65rem 0.8rem;
+
+    border: 1px solid #bcd8d2;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.search-box input:focus {
+    outline: none;
+
+    border-color: #0f766e;
+
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.search-box button {
+    padding: 0.55rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #0f766e;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-box button:hover {
+    background-color: #0b625b;
+}
+
+
+/* =========================================
+   FORM GENERIK
+   ========================================= */
+
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    color: #444;
+    font-weight: 600;
+}
+
+form input,
+form select {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 0.65rem 0.75rem;
+
+    border: 1px solid #bcd8d2;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    background-color: white;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+
+    border-color: #0f766e;
+
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+
+/* ===== Tombol Submit ===== */
+form button[type="submit"] {
+    padding: 0.65rem 1.4rem;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #0f766e;
+    color: white;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0b625b;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ERROR
+   ========================================= */
+
+.error {
+    display: block;
+
+    margin-top: 0.25rem;
+
+    color: #d9534f;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 1.5rem 1rem;
+
+    text-align: center;
+
+    color: #6f8a86;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   HAMBURGER
+   ========================================= */
+
+.nav-toggle-label {
+    display: none;
+
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE (TABLET & MOBILE)
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 1.25rem;
+    }
+
+    header nav ul {
+        gap: 0.2rem;
+    }
+
+    header nav a {
+        padding: 0.55rem 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 65px;
+        padding: 0 1rem;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+
+        width: 100%;
+        order: 3;
+
+        padding-bottom: 1rem;
+    }
+
+    header nav.nav-open {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0.3rem;
+    }
+
+    header nav a {
+        text-align: center;
+    }
+
+    main {
+        width: calc(100% - 24px);
+        margin: 1.2rem auto;
+    }
+
+    section {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .stats-grid article {
+        padding: 1.1rem;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
+}
