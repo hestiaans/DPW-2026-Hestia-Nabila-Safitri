@@ -1,9 +1,9 @@
 <?php
-$host = "db.dsyqkmqevewtnnpaqdap.supabase.co"; 
+$host = "utawjeejvebswflkkviu.supabase.co"; 
 $port = "5432"; 
 $db   = "postgres"; 
 $user = "postgres";
-$pass = "rW9LS+ESi78!NZ?"; 
+$pass = "8R6nEIciOywLMHT4"; 
 
 try {
     // 3. Menggunakan driver pgsql (PostgreSQL) bawaan PHP
