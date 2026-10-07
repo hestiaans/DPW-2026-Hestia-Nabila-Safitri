@@ -5,6 +5,8 @@ $db   = "postgres";
 $user = "postgres";
 $pass = "8R6nEIciOywLMHT4"; 
 
+$dsn = "pgsql:host=$host;port=$port;dbname=$db";
+
 try {
     // 3. Menggunakan driver pgsql (PostgreSQL) bawaan PHP
     $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$db", $user, $pass);
