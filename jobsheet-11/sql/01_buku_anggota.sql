@@ -2,7 +2,7 @@
 -- Jalankan setelah membuat database, misal:
 --   createdb simpus_mini
 --   psql -d simpus_mini -f sql/01_buku_anggota.sql
---   5i2FwTt6HpLiSNUV
+--   8R6nEIciOywLMHT4
 
 CREATE TABLE IF NOT EXISTS buku (
     id SERIAL PRIMARY KEY,

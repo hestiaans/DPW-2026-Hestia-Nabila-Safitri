@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/../includes/auth.php';
 $page_title = "Edit Buku";
 include __DIR__ . '/../includes/header.php';
 require __DIR__ . '/../includes/koneksi.php';
@@ -29,6 +30,7 @@ if (!$buku) {
             <?php endif; ?>
 
             <form id="form-tambah" method="post" action="proses_edit.php">
+                <?php echo csrf_field(); ?>
                 <input type="hidden" name="id" value="<?php echo $buku['id']; ?>">
                 <p>
                     <label for="judul">Judul</label><br>
